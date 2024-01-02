@@ -22,5 +22,4 @@ module.exports = (sequelize) => {
   return StaffRole;
 };
 
-const services=require('service.js../models')
-const route =require('route.js../models')
+

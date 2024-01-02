@@ -9,6 +9,34 @@ const TicketingMachine = require('./ticketingMachine')(sequelize);
 const Stops = require('./stops')(sequelize);
 const Vehicle = require('./vehicle')(sequelize);
 const VehicleStaffUser = require('./vehicleStaffUser')(sequelize);
+//for fleet management
+const Trip = require('./fleetManagement/trip')(sequelize)
+const FleetCompany = require('./fleetManagement/fleetCompany')(sequelize)
+const FleetCompanyStaff = require('./fleetManagement/fleetCompanyStaff')(sequelize)
+const FleetPortalCompanyType = require('./fleetManagement/fleetPortalCompanyType')(sequelize)
+const VehicleNew=require('./fleetManagement/vehicle')(sequelize)
+const FleetPortalUser = require('./fleetManagement/fleetPortalUser')(sequelize)
+const FleetPortalUserType = require('./fleetManagement/fleetPortalUserType')(sequelize)
+const Route = require('./fleetManagement/route')(sequelize)
+const RouteStopMapping = require('./fleetManagement/routeStopMapping')(sequelize)
+const Service = require('./fleetManagement/service')(sequelize)
+const StaffRole= require('./fleetManagement/staffRole')(sequelize)
+const Stop= require('./fleetManagement/stop')(sequelize)
+const UserProfile= require('./fleetManagement/userProfile')(sequelize)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 sequelize.sync({ force: false })
   .then(() => {
@@ -26,4 +54,21 @@ module.exports = {
   Stops,
   Vehicle,
   VehicleStaffUser,
+  Trip,
+  FleetCompany,
+  FleetCompanyStaff,
+  FleetPortalCompanyType,
+  VehicleNew,
+  FleetPortalUser,
+  FleetPortalUserType,
+  Route,
+  RouteStopMapping,
+  Service,
+  StaffRole,
+  Stop,
+  UserProfile
+  
+
+
+ 
 };
