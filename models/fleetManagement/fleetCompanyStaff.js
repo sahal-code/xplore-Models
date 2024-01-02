@@ -1,27 +1,35 @@
-
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-  const AppUser = sequelize.define('AppUser', {
-    user_id: {
+  const FleetCompanyStaff = sequelize.define('FleetCompanyStaff', {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      allowNull: false,
     },
     first_name: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     middle_name: {
       type: DataTypes.STRING,
     },
     last_name: {
-      type: DataTypes.STRING, 
-      allowNull: false,
+      type: DataTypes.STRING,
     },
-    user_type: {
-      type: DataTypes.JSON,
-      allowNull: false,
+    fleet_owner: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'FleetCompany',
+        key: 'id',
+      },
+    },
+    staff_role: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'StaffRole',
+        key: 'id',
+      },
     },
     email_id: {
       type: DataTypes.STRING,
@@ -32,20 +40,13 @@ module.exports = (sequelize) => {
     phone: {
       type: DataTypes.BIGINT,
     },
-    profile_photo: {
-      type: DataTypes.STRING,  
-    },
     otp_receive_time: {
       type: DataTypes.DATE,
-    },
-    verification_status: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
     },
     additional_info: {
       type: DataTypes.JSON,
     },
   });
 
-  return AppUser;
+  return FleetCompanyStaff;
 };

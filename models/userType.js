@@ -17,3 +17,7 @@ module.exports = (sequelize) => {
 
   return UserType;
 };
+
+
+
+// model for userType

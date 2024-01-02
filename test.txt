@@ -1,0 +1,30 @@
+Fleet Portal User .
+User Profile .
+Fleet Portal User Type .
+Fleet Company .
+Fleet Company Staff . 
+Vehicle .
+Route .
+Stop .
+Staff Role 
+Fleet Portal Company Type 
+Service 
+Trip 
+Route Stop Mapping 
+
+
+models/fleetManagement/fleetPortalUser.js
+models/fleetManagement/fleetCompany.js
+models/fleetManagement/fleetPortalUserType.js
+models/fleetManagement/userProfile.js
+models/fleetManagement/fleetCompanyStaff.js
+models/fleetManagement/vehicle.js
+models/fleetManagement/route.js
+models/fleetManagement/stop.js
+models/fleetManagement/fleetPortalCompanyType.js
+models/fleetManagement/staffRole.js
+models/fleetManagement/service.js
+models/fleetManagement/trip.js
+models/fleetManagement/routeStopMapping.js
+
+
