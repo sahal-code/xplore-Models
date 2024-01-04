@@ -5,14 +5,14 @@ module.exports = (sequelize) => {
     route_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Route',
+        model: 'Routes',
         key: 'id',
       },
     },
     stop_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Stop',
+        model: 'Stops',
         key: 'id',
       },
     },

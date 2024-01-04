@@ -17,14 +17,14 @@ module.exports = (sequelize) => {
     user_type: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'FleetPortalUserType',
+        model: 'FleetPortalUserTypes',
         key: 'id',
       },
     },
     company_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'FleetCompany',
+        model: 'FleetCompanies',
         key: 'id',
       },
     },

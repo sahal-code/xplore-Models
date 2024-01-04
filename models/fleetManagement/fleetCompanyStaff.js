@@ -20,14 +20,14 @@ module.exports = (sequelize) => {
     fleet_owner: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'FleetCompany',
+        model: 'FleetCompanies',
         key: 'id',
       },
     },
     staff_role: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'StaffRole',
+        model: 'StaffRoles',
         key: 'id',
       },
     },

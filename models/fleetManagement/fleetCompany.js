@@ -20,7 +20,7 @@ module.exports = (sequelize) => {
     company_type: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'FleetPortalCompanyType',
+        model: 'FleetPortalCompanyTypes',
         key: 'id',
       },
     },

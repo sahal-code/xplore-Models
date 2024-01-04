@@ -11,14 +11,14 @@ module.exports = (sequelize) => {
     route_description: {
       type: DataTypes.STRING,
     },
-    stop_list: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
+    // stop_list: {
+    //   type: DataTypes.ARRAY(DataTypes.INTEGER),
      
-      references: {
-        model: 'Stops',
-        key: 'stop_id',
-      },
-    },
+    //   references: {
+    //     model: 'Stops',
+    //     key: 'id',
+    //   },
+    // },
     additional_info: {
       type: DataTypes.JSON,
     },

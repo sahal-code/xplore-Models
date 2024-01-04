@@ -14,14 +14,14 @@ module.exports = (sequelize) => {
     vehicle: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Vehicle',
+        model: 'Vehicles',
         key: 'id',
       },
     },
     route: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Route',
+        model: 'Routes',
         key: 'id',
       },
     },
@@ -37,14 +37,14 @@ module.exports = (sequelize) => {
     driver: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'FleetCompanyStaff',
+        model: 'FleetCompanyStaffs',
         key: 'id',
       },
     },
     conductor: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'FleetCompanyStaff',
+        model: 'FleetCompanyStaffs',
         key: 'id',
       },
     },

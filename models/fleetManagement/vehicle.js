@@ -20,32 +20,31 @@ module.exports = (sequelize) => {
     capacity: {
       type: DataTypes.INTEGER,
     },
-    pos_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'TicketingMachineUser',
-        key: 'id',
-      },
-    },
+    // pos_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'TicketingMachineUsers',
+    //     key: 'id',
+    //   },
+    // },
     gps_id: {
       type: DataTypes.INTEGER,
-      
       references: {
-        model: 'GPSDevice',
-        key: 'id',
+        model: 'GPSDevices',
+        key: 'device_id',
       },
     },
     service: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Service',
+        model: 'Services',
         key: 'id',
       },
     },
     fleet_owner: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'FleetCompany',
+        model: 'FleetCompanies',
         key: 'id',
       },
     },
