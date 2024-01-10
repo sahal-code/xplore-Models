@@ -6,7 +6,7 @@ const AppUser = require('./appUser')(sequelize);
 const OwnerUser = require('./ownerUser')(sequelize);
 const GPSDevice = require('./gpsDevice')(sequelize);
 const TicketingMachine = require('./ticketingMachine')(sequelize);
-const Vehicle = require('./vehicle')(sequelize);
+const Vehicle = require('./fleetManagement/vehicle')(sequelize);
 const FleetPortalCompanyType = require('./fleetManagement/fleetPortalCompanyType')(sequelize)
 const FleetCompany = require('./fleetManagement/fleetCompany')(sequelize)
 const Stops = require('./stops')(sequelize);
@@ -24,7 +24,7 @@ const StaffRole= require('./fleetManagement/staffRole')(sequelize)
 const Stop= require('./fleetManagement/stop')(sequelize)
 const UserProfile= require('./fleetManagement/userProfile')(sequelize)
 
-sequelize.sync({ force: false })
+sequelize.sync({ force: true })
   .then(() => {
     console.log('Database and tables synced!');
   })

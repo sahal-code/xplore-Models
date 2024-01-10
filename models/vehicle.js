@@ -1,6 +1,6 @@
 
 const { DataTypes } = require('sequelize');
-
+const sequelize=require('./sequelize.js')
 module.exports = (sequelize) => {
   const Vehicle = sequelize.define('Vehicle', {
     vehicle_id: {
@@ -23,6 +23,7 @@ module.exports = (sequelize) => {
     },
     fleet_owner: {
       type: DataTypes.JSON, 
+      allowNull:true,
     },
     additional_info: {
       type: DataTypes.JSON,
@@ -31,3 +32,4 @@ module.exports = (sequelize) => {
 
   return Vehicle;
 };
+

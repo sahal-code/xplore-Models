@@ -1,4 +1,5 @@
 const { DataTypes } = require('sequelize');
+const sequelize = require('../sequelize')
 
 module.exports = (sequelize) => {
   const Vehicle = sequelize.define('Vehicle', {
@@ -20,6 +21,8 @@ module.exports = (sequelize) => {
     capacity: {
       type: DataTypes.INTEGER,
     },
+
+
     // pos_id: {
     //   type: DataTypes.INTEGER,
     //   references: {
@@ -27,6 +30,8 @@ module.exports = (sequelize) => {
     //     key: 'id',
     //   },
     // },
+
+
     gps_id: {
       type: DataTypes.INTEGER,
       references: {
