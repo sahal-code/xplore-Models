@@ -39,6 +39,24 @@ const addVehicle = async (req, res) => {
 };
 
 
+const getVehicleById = async (req, res) => {
+  try {
+    const { vehicleId } = req.params;
+
+    // Fetch the vehicle by ID
+    const vehicle = await Vehicle.findByPk(vehicleId);
+
+    if (!vehicle) {
+      return res.status(404).json({ error: 'Vehicle not found' });
+    }
+
+    res.json(vehicle);
+  } catch (error) {
+    console.error('Error fetching vehicle:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+}
+
 
 // const addVehicle = async (req, res) => {
 //   try {
@@ -89,6 +107,7 @@ const getAllVehicles = async (req, res) => {
 
 module.exports = {
   addVehicle,
-  getAllVehicles
+  getAllVehicles,
+  getVehicleById,
 };
 
