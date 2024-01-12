@@ -4,6 +4,7 @@ const { AppUser } = require('./models');
 const vehiclesRoute = require('./routes/vehicleRoute')
 const stopsRoute = require('./routes/stopsRoute')
 const routeRoute = require('./routes/routeRoute')
+const userProfileRoute = require('./routes/userProfileRoute')
 // const vehiclesController = require('../controllers/vehiclesController');
 
 
@@ -16,7 +17,7 @@ app.use(express.json());
 app.use('/api/vehicles', vehiclesRoute)
 app.use('/api/stops', stopsRoute)
 app.use('/api/routes', routeRoute)
-
+app.use('/api/userProfiles', userProfileRoute)
 
 // app.post('/addUser', async (req, res) => {
 //   try {
